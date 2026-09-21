@@ -24,7 +24,11 @@ public class Employees {
 		Workbook wb = WorkbookFactory.create(fis);
 		ExcelUtility exutil=new ExcelUtility();
 		String cdname=exutil.getCellData(wb,"Sheet1", 7, 0);
+		System.out.println(cdname);
+		String csname=exutil.getCellData(wb,"Sheet1", 7, 0);
+		String cfname=exutil.getCellData(wb,"Sheet1", 7, 1);
 		String cdEmail=exutil.getCellData(wb,"Sheet1", 7, 1);
+		String cMail=exutil.getCellData(wb,"Sheet1", 7, 0);
 		String cdPhone=exutil.getCellData(wb,"Sheet1", 7, 2);
 		String cdUsername=exutil.getCellData(wb,"Sheet1", 7, 3);
 		String cddesig=exutil.getCellData(wb,"Sheet1", 7, 4);
