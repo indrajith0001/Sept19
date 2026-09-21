@@ -19,12 +19,15 @@ import Genericutility.SeleniumUtils;
 public class Employees {
 	public static void main(String[] args) throws Exception {
 		WebDriver driver = Ninza_Hrm_businessUtils.login();
+		sysout
 		Thread.sleep(3000);
 		FileInputStream fis=new FileInputStream("./src/test/resources/emp_data60.xlsx");
 		Workbook wb = WorkbookFactory.create(fis);
 		ExcelUtility exutil=new ExcelUtility();
 		String cdname=exutil.getCellData(wb,"Sheet1", 7, 0);
+		String csname=exutil.getCellData(wb,"Sheet1", 7, 0);
 		String cdEmail=exutil.getCellData(wb,"Sheet1", 7, 1);
+		String cMail=exutil.getCellData(wb,"Sheet1", 7, 0);
 		String cdPhone=exutil.getCellData(wb,"Sheet1", 7, 2);
 		String cdUsername=exutil.getCellData(wb,"Sheet1", 7, 3);
 		String cddesig=exutil.getCellData(wb,"Sheet1", 7, 4);
